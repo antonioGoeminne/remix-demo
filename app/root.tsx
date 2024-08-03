@@ -6,6 +6,12 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import "./tailwind.css";
+import { Sidebar } from "ui";
+import { CubeIcon } from "@radix-ui/react-icons";
+
+const sidebarOptions = [
+  { label: "Products", value: "products", href: "/products", Icon: CubeIcon },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,7 +23,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <Sidebar options={sidebarOptions} />
+        <div className="fixed left-[300px]">{children}</div>
         <ScrollRestoration />
         <Scripts />
       </body>
