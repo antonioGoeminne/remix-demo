@@ -23,8 +23,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Sidebar options={sidebarOptions} />
-        <div className="fixed left-[300px]">{children}</div>
+        <div className="flex w-full min-h-screen">
+          <Sidebar options={sidebarOptions} />
+          <main className="grid flex-1 items-start gap-2 p-4 sm:px-6 sm:py-0 md:gap-4 ">
+            {children}
+          </main>
+        </div>
         <ScrollRestoration />
         <Scripts />
       </body>

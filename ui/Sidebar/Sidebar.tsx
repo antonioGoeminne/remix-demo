@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 export const Sidebar: React.FC<SidebarProps> = ({ options }) => {
   return (
-    <div className="sidebar fixed top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-primary">
+    <div className="relative top-0 bottom-0 lg:left-0 p-2 w-[300px] overflow-y-auto text-center bg-primary">
       <div className="text-gray-100 text-xl">
         <Link to="/" className="p-2.5 mt-1 flex items-center cursor-pointer">
           <i className="bi bi-app-indicator px-2 py-1 rounded-md bg-blue-600"></i>
